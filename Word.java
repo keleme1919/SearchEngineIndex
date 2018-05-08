@@ -1,7 +1,7 @@
 //hellohihi
 /**
  * Write a description of class Word here.
- * hello help
+ * 
  */
 public class Word
 {
