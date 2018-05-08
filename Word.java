@@ -1,4 +1,4 @@
-
+//hello
 /**
  * Write a description of class Word here.
  *
@@ -9,7 +9,7 @@ public class Word
     String fileName;
     int row;
     int col;
-    
+
     public Word(String word, String fileName, int row, int col){
         this.word = word;
         this.fileName = fileName;
@@ -25,5 +25,5 @@ public class Word
     public int getCol(){
         return this.col;
     }
-    
+
 }
