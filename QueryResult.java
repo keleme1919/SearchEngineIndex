@@ -1,30 +1,28 @@
+import java.io.*;
+import java.util.*;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 public class QueryResult {
   //has all the information of the location of the user input
-  private String word;
   private String filename;
   private String snipbit;
 
-  public QueryResult(String word, String filename, String snipbit) {
-    this.word = word;
+  public QueryResult(String filename, String snipbit) {
     this.filename = filename;
     this.snipbit = snipbit;
   }
 
-  //word = the word the user is trying to search
-  public String getQuery(String word) {
-    return this.word;
-    //return ArrayList
-  }
-  //method just taking in the root and outputting the filenames in an arraylist
-  public File getFileNames() {
-    return this.filename;
-  }
-  // method that takes in that arraylists and loops through all the elements
-  public File parseFile() {
 
+  public String toString() {
+    //String output = "QUERY OBJECT";
+    output = output.concat(": ");
+    output = output.concat(this.filename);
+    output= output.concat("\n");
+    output = output.concat(this.snipbit);
+    return output;
   }
-  //and uses them as input for jsoup
-    // returns the arraylist of single words from that specific file
-
 
 }

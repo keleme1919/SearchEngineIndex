@@ -1,23 +1,16 @@
+import java.io.*;
+import java.util.ArrayList;
 
+  public class SearchEngineDriver {
 
-public class SearchEngineDriver{
+    public static void main(String[] args) throws IOException {
+        SearchEngineIndex sei = new SearchEngineIndex("wildanimalsonline.com/");
+        sei.buildIndexMap();
+        String input = args[0];
+        //System.out.println(sei.getIndexMap().entrySet());
 
-    public static void main(String[] args){
-        SearchEngineIndex sei = new SearchEngineIndex();
-        sei.buildIndex(RootFolderName);
-        ArrayList<QueryResult> results = sei.getQuery(inputsearchword);
-        for (element: results){
-            System.out.println(element.toString())
-        }
-
-
-
-
-
-
+        ArrayList<QueryResult> queries = sei.getIndexMap().get(input);
+        for (QueryResult query : queries)
+            System.out.println(query.toString());
     }
-
-
-
-
 }
